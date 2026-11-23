@@ -1,0 +1,26 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+typedef struct student
+{
+int rollno;
+char name[50];
+float percentage;
+struct student *next;
+}SLL;
+
+void stud_add(SLL **);
+void stud_del(SLL **);
+void delete_all(SLL **);
+void stud_show(SLL *);
+void stud_mod(SLL *);
+void stud_save(SLL *);
+void reverse_link(SLL **);
+int count(SLL *);
+void sort(SLL *);
+
+#endif

@@ -1,0 +1,13 @@
+CC = gcc
+TARGET = student
+SRCS = stud_main.c stud_add.c stud_mod.c stud_del.c stud_show.c stud_save.c sort.c delete_all.c reverse_link.c
+OBJS = $(SRCS:.c=.o)
+
+$(TARGET):$(OBJS)
+        $(CC) -o $(TARGET) $(OBJS)
+
+%o:%.c
+        $(CC) -c $< -o $@
+
+clean:
+        rm -f $(OBJS) $(TARGET)
